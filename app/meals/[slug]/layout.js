@@ -1,3 +1,6 @@
+import MealOverview from "./overview/page";
+import MealTitle from "./title/page";
+
 const mealLayout = ({ children, params }) => {
   return (
     <>
@@ -8,8 +11,8 @@ const mealLayout = ({ children, params }) => {
         <br />
         <br />
         <div>
-          <a href={`/meals/${params.filter[0]}/title`}>Title</a> |
-          <a href={`/meals/${params.filter[0]}/overview`}>overview</a>
+          <a href={`/meals/${params.slug}/title`}>Title</a> |
+          <a href={`/meals/${params.slug}/overview`}>overview</a>
           <br />
           <br />
           <br />
@@ -17,6 +20,8 @@ const mealLayout = ({ children, params }) => {
           <br />
         </div>
         {children}
+        <MealOverview/>
+        <MealTitle/>
       </div>
     </>
   );
