@@ -11,6 +11,7 @@ export default async function Home() {
         <Link href={`/shareMeal`}> Share Meal </Link>|
         <Link href={`/interceptedMeals`}> Intercepted Meals </Link>|
         <Link href={`/posts`}>Posts </Link>|
+        <Link href={`/users`}>Users </Link>|
       </div>
 
       <br />

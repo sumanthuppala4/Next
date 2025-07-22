@@ -1,6 +1,7 @@
 "use server";
 
 import { addUser } from "@/lib/authenticate-user";
+import { hashUserPassword } from "@/lib/hash";
 import { redirect } from "next/navigation";
 
 export async function userSignup(prevState, formData) {
@@ -13,6 +14,7 @@ export async function userSignup(prevState, formData) {
     return { error: "Email and password are required." };
   }
   // Simulate successful signup
-  addUser(email, password);
-  redirect("/training");
+  const hashedPassword = hashUserPassword(password);
+  addUser(email, hashedPassword);
+  redirect("/users");
 }
