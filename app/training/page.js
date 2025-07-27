@@ -1,6 +1,16 @@
-import { getTrainings } from '@/lib/training';
+import { verifyAuthSession } from "@/lib/auth-lucia";
+import { getTrainings } from "@/lib/training";
+import { redirect } from "next/navigation";
 
 export default async function TrainingPage() {
+  const result = await verifyAuthSession();
+
+  console.log(result, "result from training page");
+
+  if (!result.user) {
+    return redirect("/");
+  }
+
   const trainingSessions = getTrainings();
 
   return (

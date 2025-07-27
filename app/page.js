@@ -10,8 +10,8 @@ export default async function Home() {
         <Link href={`/meals`}> Meals </Link>|<Link href={`/news`}> News </Link>|
         <Link href={`/shareMeal`}> Share Meal </Link>|
         <Link href={`/interceptedMeals`}> Intercepted Meals </Link>|
-        <Link href={`/posts`}>Posts </Link>|
-        <Link href={`/users`}>Users </Link>|
+        <Link href={`/posts`}>Posts </Link>|<Link href={`/users`}>Users </Link>|
+        <Link href={`/training`}>Training </Link>|
       </div>
 
       <br />
