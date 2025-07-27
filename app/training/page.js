@@ -1,3 +1,4 @@
+import { userLogout } from "@/actions/auth-action";
 import { verifyAuthSession } from "@/lib/auth-lucia";
 import { getTrainings } from "@/lib/training";
 import { redirect } from "next/navigation";
@@ -15,6 +16,9 @@ export default async function TrainingPage() {
 
   return (
     <main>
+      <form action={userLogout}>
+        <button type="submit">logout</button>
+      </form>
       <h1>Find your favorite activity</h1>
       <ul id="training-sessions">
         {trainingSessions.map((training) => (

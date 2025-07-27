@@ -1,7 +1,11 @@
 import Link from "next/link";
 import AuthForm from "@/components/auth-form";
 
-export default async function Home() {
+export default async function Home({ searchParams }) {
+  const mode = (await searchParams.mode) || "login";
+
+  console.log(mode, "mode from home page");
+
   return (
     <>
       <div>
@@ -20,7 +24,7 @@ export default async function Home() {
       <h1>Welcome back!</h1>
       <p>Here's what you might've missed.</p>
 
-      <AuthForm />
+      <AuthForm mode={mode} />
     </>
   );
 }
