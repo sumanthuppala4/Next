@@ -16,6 +16,7 @@ export default async function Home({ searchParams }) {
         <Link href={`/interceptedMeals`}> Intercepted Meals </Link>|
         <Link href={`/posts`}>Posts </Link>|<Link href={`/users`}>Users </Link>|
         <Link href={`/training`}>Training </Link>|
+        <Link href={`/courses`}>Courses </Link>|
       </div>
 
       <br />
